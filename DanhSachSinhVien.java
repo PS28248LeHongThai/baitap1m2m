@@ -20,25 +20,22 @@ public class DanhSachSinhVien {
             scan.nextLine();
             System.out.print("Truong dang hoc: ");
             String college = scan.nextLine();
+            System.out.print("Nhap diem Toan: ");
+            double toan = scan.nextDouble();
+            scan.nextLine();
             System.out.print("Nhap khoi (TN/XH): ");
             String type = scan.nextLine();
             if (type.equalsIgnoreCase("TN")) {
-                System.out.print("Nhap diem Toan: ");
-                double Toan = scan.nextDouble();
                 System.out.print("Nhap diem Hoa: ");
                 double Hoa = scan.nextDouble();
                 scan.nextLine();
-
-                SinhVien newSV = new SinhVienTN(Toan, Hoa, type, name, college, age);
+                SinhVien newSV = new SinhVienTN(Hoa, type, name, college, age, toan);
                 list.add(newSV);
-            } else {
-                System.out.print("Nhap diem Toan: ");
-                double Toan = scan.nextDouble();
+            } else {                
                 System.out.print("Nhap diem GDCD: ");
                 double GDCD = scan.nextDouble();
                 scan.nextLine();
-
-                SinhVien newSV = new SinhVienXH(Toan, GDCD, type, name, college, age);
+                SinhVien newSV = new SinhVienXH(GDCD, type, name, college, age, toan);
                 list.add(newSV);
             }
         } while (true);
@@ -52,6 +49,7 @@ public class DanhSachSinhVien {
         System.out.println("Khoi: " + sv.getType());
         System.out.println("DiemTB: " + sv.getDTB());
         System.out.println("Ket qua: " + sv.getHocLuc());
+
     }
 
     public void export() {

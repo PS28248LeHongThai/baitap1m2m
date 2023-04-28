@@ -6,6 +6,7 @@ abstract class SinhVien {
     private String name;
     private String college;
     private int age;
+    private double toan;
 
     public SinhVien() {
     }
@@ -50,11 +51,20 @@ abstract class SinhVien {
         this.age = age;
     }
 
-    public SinhVien(String type, String name, String college, int age) {
+    public double getToan() {
+        return toan;
+    }
+
+    public void setToan(double toan) {
+        this.toan = toan;
+    }
+    
+    public SinhVien(String type, String name, String college, int age, double toan) {
         this.type = type;
         this.name = name;
         this.college = college;
         this.age = age;
+        this.toan = toan;
     }
     
     public abstract double getDTB();

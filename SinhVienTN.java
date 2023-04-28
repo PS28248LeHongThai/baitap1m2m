@@ -1,20 +1,27 @@
 package Day3;
 
 class SinhVienTN extends SinhVien{
-   private Double Toan;
-   private Double Hoa;
+   private double Hoa;
 
     public SinhVienTN() {
     }
 
-    public SinhVienTN(Double Toan, Double Hoa, String type, String name, String college, int age) {
-        super(type, name, college, age);
-        this.Toan = Toan;
+    public SinhVienTN(Double Hoa, String type, String name, String college, int age, double toan) {
+        super(type, name, college, age, toan);
         this.Hoa = Hoa;
+        
     }    
+
+    public double getHoa() {
+        return Hoa;
+    }
+
+    public void setHoa(double Hoa) {
+        this.Hoa = Hoa;
+    }
    
     @Override
     public double getDTB(){
-        return (Hoa + Toan)/2;
+        return (this.Hoa + super.getToan())/2;
     }
 }
