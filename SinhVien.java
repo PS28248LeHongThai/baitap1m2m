@@ -7,6 +7,7 @@ abstract class SinhVien {
     private String college;
     private int age;
     private double toan;
+    private double avg;
 
     public SinhVien() {
     }
@@ -58,6 +59,15 @@ abstract class SinhVien {
     public void setToan(double toan) {
         this.toan = toan;
     }
+
+    public double getAvg() {
+        return avg;
+    }
+
+    public void setAvg(double avg) {
+        this.avg = avg;
+    }
+    
     
     public SinhVien(String type, String name, String college, int age, double toan) {
         this.type = type;
@@ -67,9 +77,8 @@ abstract class SinhVien {
         this.toan = toan;
     }
     
-    public abstract double getDTB();
     public String getHocLuc(){
-        double DTB = getDTB();
+        double DTB = this.getAvg();
         if(DTB>5){
             return "Pass";
         }else{

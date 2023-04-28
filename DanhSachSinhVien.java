@@ -47,8 +47,8 @@ public class DanhSachSinhVien {
         System.out.println("Truong dang hoc: " + sv.getCollege());
         System.out.println("Quoc tich: " + sv.getNational());
         System.out.println("Khoi: " + sv.getType());
-        System.out.println("DiemTB: " + sv.getDTB());
-        System.out.println("Ket qua: " + sv.getHocLuc());
+        System.out.println("DiemTB: " + sv.getAvg());
+        System.out.println("Ket qua: " + sv.getHocLuc());       
 
     }
 
@@ -110,7 +110,7 @@ public class DanhSachSinhVien {
         minDTB = scan.nextDouble();
         System.out.println("Danh sach Sinh Vien co diem lon hon " + minDTB + " la: ");
         for (SinhVien sv : list) {
-            if (minDTB < sv.getDTB()) {
+            if (minDTB < sv.getAvg()) {
                 exportStudent(sv);
             }
         }

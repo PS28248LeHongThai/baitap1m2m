@@ -9,6 +9,7 @@ class SinhVienXH extends SinhVien{
     public SinhVienXH(Double GDCD, String type, String name, String college, int age,double toan) {
         super(type, name, college, age, toan);
         this.GDCD = GDCD;
+        super.setAvg((this.GDCD * 2 + super.getToan())/3);
     }  
 
     public double getGDCD() {
@@ -20,9 +21,9 @@ class SinhVienXH extends SinhVien{
     }
     
     
-@Override
-public double getDTB(){
-    return (this.GDCD * 2 + super.getToan())/3;
-    
-}
+//@Override
+//public double getDTB(){
+//    return (this.GDCD * 2 + super.getToan())/3;
+//    
+//}
 }
